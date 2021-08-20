@@ -1,3 +1,9 @@
-x = float(input('O valor do salário atual: '))
-r = x * 1.15
-print('O salário deste funcionário, com 15% de aumento, ficará o valor de R$ {:.2f}'.format(r))
+n = float(input('Digite o valor em metros para converter para as outras medidas: '))
+cm = n * 100
+mm = n * 1000
+dm = n * 10
+dam = n / 10
+hm = n / 100
+km = n / 1000
+print('{} metros é o mesmo que {}mm, {}cm, {}dm, {}dam, {}hm e {}km.'.format(n, mm,cm,dm, dam, hm, km))
+
