@@ -1,0 +1,23 @@
+x = int(input('Digite um número para saber a tabuada do mesmo: '))
+r1 = x*1
+r2 = x*2
+r3 = x*3
+r4 = x*4
+r5 = x*5
+r6 = x*6
+r7 = x*7
+r8 = x*8
+r9 = x*9
+r10 = x*10
+print('------------')
+print('{} x 1  = {}'.format(x, r1))
+print('{} X 2  = {}'.format(x, r2))
+print('{} X 3  = {}'.format(x, r3))
+print('{} X 4  = {}'.format(x, r4))
+print('{} X 5  = {}'.format(x, r5))
+print('{} X 6  = {}'.format(x, r6))
+print('{} X 7  = {}'.format(x, r7))
+print('{} X 8  = {}'.format(x, r8))
+print('{} X 9  = {}'.format(x, r9))
+print('{} X 10 = {}'.format(x, r10))
+print('------------')
