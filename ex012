@@ -1,0 +1,3 @@
+x = float(input('O valor do salário atual: '))
+r = x * 1.15
+print('O salário deste funcionário, com 15% de aumento, ficará o valor de R$ {:.2f}'.format(r))
