@@ -1,0 +1,5 @@
+nota1 = float(input('Digite sua nota em matemática no primeira trimestre: '))
+nota2 = float(input('Digite sua nota em matemática no segundo trimestre: '))
+nota3 = float(input('Digite sua nota em matemática no terceiro trimestre: '))
+media = (nota1 + nota2 + nota3)/3
+print('Sua média em matemática é: {:.2f}.'.format(media))
