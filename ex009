@@ -1,0 +1,3 @@
+x = float(input('Digite seu o valor em reais que possui: '))
+v = x / (3.27)
+print('A quantidade de dólares que você pode comprar é: {:.2f}.'.format(v))
