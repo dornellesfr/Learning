@@ -1,0 +1,12 @@
+''' from math import hypot
+ca = float(input('Digite o comprimento do cateto adjacente: '))
+co = float(input('Digite o comprimento do cateto oposto: '))
+hip = hypot(ca, co)
+print('A hipotenusa do triângulo com catetos {} e {} é {}'.format(ca, co, hip))'''
+
+from math import sqrt
+
+ca = float(input('Digite o valor e um cateto: '))
+co = float(input('Digite o valor de outro cateto: '))
+hip = sqrt(ca ** 2 + co ** 2)  # ** (1/2)
+print('O valor da hipotenusa é {}'.format(hip))
