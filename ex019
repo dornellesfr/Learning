@@ -1,0 +1,13 @@
+from random import shuffle
+a1 = input('Digite o nome de um aluno: ')
+a2 = input('Digite o nome de outro aluno: ')
+a3 = input('Digite o nome de outro: ')
+a4 = input('Digite o nome de outro aluno: ')
+l1 = [a1, a2, a3, a4]
+shuffle(l1)
+print('A ordem das apresentações será: ')
+print(l1)
+
+'''l2 = ['Fernando', 'Mateus', 'Paulo', 'Emerson']
+shuffle(l2)
+print('A lista é {}'.format(l2))'''
