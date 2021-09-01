@@ -1,0 +1,14 @@
+from random import randint
+from time import sleep
+n = randint(0, 5)
+print('-=-' * 20)
+print('Vou escolher um número. Tente adivinhar... ')
+print('-=-' * 20)
+sleep(2)
+user = int(input('Digite um número de 0 a 5: '))
+print('PROCESSANDO...')
+sleep(2)
+if user == n:
+    print('Boa, foi {} que eu escolhi!'.format(n))
+else:
+    print('Que peninha, você errou, o número que eu escolhi não foi {}, mas sim {}'.format(user, n))
