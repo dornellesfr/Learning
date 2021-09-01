@@ -1,0 +1,7 @@
+'''nome = str(input('Digite seu nome: ')).strip()
+print('Analisando seu nome...')
+s = nome.upper().split()
+print('No seu nome há Silva? {}'.format(s[0 or 1 or 2 or 3 or 4 or 5 or 6] == 'SILVA'))'''
+
+nome = str(input('Digite seu nome: '))
+print('Seu nome tem Silva? {}'.format('SILVA' in nome.upper()))
