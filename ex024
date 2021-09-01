@@ -1,0 +1,7 @@
+'''n = str(input('Qual cidade você nasceu? ')).strip()
+x = 'São' in n
+y = 'Santo' in n
+print('Sua cidade inicia com nome de São ou de Santo: {}'.format(x or y))'''
+
+c = str(input('Em qual cidade você nasceu? ')).strip()
+print('A cidade que você nasceu inicia com Santo: {}'.format(c[:5].upper() == 'SANTO'))
