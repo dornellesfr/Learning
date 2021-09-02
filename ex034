@@ -1,0 +1,7 @@
+salario = float(input('Digite o salário para receber o reajuste: R$'))
+a = salario * 1.15
+b = salario * 1.10
+if salario <= 1250.50:
+    print('O salário R${} ficará {:.2f} com 15% de reajuste'.format(salario, a))
+else:
+    print('O salário R${} ficará {:.2f} com 10% de reajuste'.format(salario, b))
