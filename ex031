@@ -1,0 +1,12 @@
+from time import sleep
+distancia = float(input('Diga a distância da viagem: '))
+print('Viagem menor que 200 km cobrado o valor de R$ 0.50/km')
+print('Viagem maior que 200 km cobrado o valor de R$ 0.45/km')
+print('Calculando o valor da viagem...')
+sleep(4)
+if distancia <= 200:
+    v1 = distancia * 0.50
+    print('Sua viagem sairá pela bagatela de R${:.2f}'.format(v1))
+else:
+    v2 = distancia * 0.45
+    print('Sua viagem sairá pela bagatela de R${:.2f}'.format(v2))
