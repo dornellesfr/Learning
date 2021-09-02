@@ -1,0 +1,10 @@
+print('-=-' * 8)
+print('Analisador de triângulos')
+print('-=-' * 8)
+s1 = float(input('Digite um segmento: '))
+s2 = float(input('Digite outro segmento: '))
+s3 = float(input('Digite outro segmento: '))
+if s1 + s2 > s3 and s2 + s3 > s1 and s3 + s1 > s2:
+    print('Sim, este triângulo pode ser feito!')
+else:
+    print('Este triângulo não existe.')
