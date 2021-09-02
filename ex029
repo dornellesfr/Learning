@@ -1,0 +1,9 @@
+from time import sleep
+velocidade = int(input('Qual a velocidade atual em km/h do carro? '))
+multa = (velocidade - 80) * 7
+if velocidade > 80:
+    print('Você foi multado e serão cobrados R$ 7,00 a cada KM acima de 80 km/h')
+    print('Calculando sua multa...')
+    sleep(4)
+    print('Sua multa foi de R${},00 '.format(multa))
+print('Tenha um bom dia e dirija com cautela!')
