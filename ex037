@@ -1,0 +1,17 @@
+from time import sleep
+print('\033[33m-=-' * 8)
+print('\033[33mAprovador de empréstimos\033[m')
+print('\033[33m-=-' * 8)
+nome = str(input('\033[31mDigite seu nome: ')).strip()
+salario = float(input('\033[32m{}, qual o seu salário? R$ \033[m'.format(nome)))
+casa = float(input('\033[35mDigite o valor da casa que queres comprar: R$ \033[m'))
+ano = int(input('{}, em quantos anos você deve pagar a casa? '.format(nome)))
+meses = ano * 12
+valormensal = casa / meses
+print('Nessas condições o valor mensal seria de \033[34mR${:.2f}\033[m'.format(valormensal))
+print('\033[33mVERFICANDO...\033[m')
+sleep(2)
+if valormensal <= 0.30 * salario:
+    print('\033[32mCerto, {}, seu empréstimo foi aprovado!!\033[m'.format(nome))
+else:
+    print('\033[31mSeu empréstimo foi NEGADO!\033[m')
