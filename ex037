@@ -1,0 +1,14 @@
+a = str(input("""Pressione as seguintes teclas:
+1 - Para converter em binário
+2 - Para converter para octal
+3 - Para converter em hexadecimal 
+Sua opção: """))
+n = int(input('Digite um número para a conversão: '))
+if a == '1':
+    print('O número em binário fica: {:b}.'.format(n))
+elif a == '2':
+    print('O seu número em octal é: {:o}.'.format(n))
+elif a == '3':
+    print('O número em hexadecimal é: {:X}.'.format(n))
+else:
+    print('\33[31mSEU PRIMEIRO NÚMERO NÃO É VÁLIDO!\33[m')
