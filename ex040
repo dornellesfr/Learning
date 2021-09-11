@@ -1,0 +1,9 @@
+a = float(input('Digite sua primeira nota: '))
+b = float(input('Digite sua segunda nota: '))
+nota = (a + b) / 2
+if nota < 5:
+    print('\033[31mVocê foi REPROVADO, pois tirou a média {}!\033[m'.format(nota))
+elif nota >= 7:
+    print('\033[32mVocê foi APROVADO, pois tirou a média {}, parabéns!\033[m'.format(nota))
+else:
+    print('\033[33mVocê ficou de recuperação, pois tirou a média {}.\033[m'.format(nota))
