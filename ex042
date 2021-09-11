@@ -1,0 +1,13 @@
+a = float(input('Digite um lado do triângulo: '))
+b = float(input('Digite o outro lado do triângulo: '))
+c = float(input('Digite outro lado do triângulo: '))
+if a + b > c and a + c > b and b + c > a:
+    print('Este triângulo existe e por sua vez é ', end='')
+    if a == b and b == c:
+        print('EQUILÁTERO!')
+    elif a != b != c != a:
+        print('ESCALENO!')
+    else:
+        print('ISÓSCELES')
+else:
+    print('Este triângulo não existe!')
