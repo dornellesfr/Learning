@@ -1,0 +1,24 @@
+altura = float(input('Digite sua altura em m: '))
+peso = float(input('Digite seu peso em Kg: '))
+imc = peso / altura ** 2
+emagrecer = peso - (24.99 * altura ** 2)
+engordar = (18.5 * altura ** 2) - peso
+if imc < 18.5:
+    print("""O IMC desta pessoa é {:.2f}.
+Você está abaixo do peso ideal""".format(imc))
+    print('Para ficar no peso ideal você deve engordar {:.2f} Kg'.format(engordar))
+elif imc < 25:
+    print('''O IMC desta pessoa é {:.2f}.
+Parabéns, você está no peso ideal!'''.format(imc))
+elif imc < 30:
+    print('''O IMC  desta pessoa é {:.2f}
+Você está com sobrepeso!'''.format(imc))
+    print('Você deve perder {:.2f} Kg para ficar no peso ideal.'.format(emagrecer))
+elif imc < 40:
+    print('''O IMC desta pessoa é {:.2f}
+Você está com OBESIDADE, tome cuidado!'''.format(imc))
+    print('Você deve perder {:.2f} Kg para chegar ao peso ideal'.format(emagrecer))
+else:
+    print('''O IMC desta pessoa é {:.2f}
+Você está com obesidade mórbida, procure um médico e se cuide!'''.format(imc))
+    print('Você deve perder {:.2f} Kg para chegar ao peso ideal.'.format(emagrecer))
