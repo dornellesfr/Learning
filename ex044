@@ -1,0 +1,25 @@
+print('=' * 12, 'LOJAS DORNELLES', '=' * 12)
+valor = float(input('Valor total das compras: R$ '))
+pagamento = int(input('''
+[ 1 ] Para pagamentos à vista dinhero/cheque (10% de desconto)
+[ 2 ] Para pagamentos à vista no cartão (5% de desconto)
+[ 3 ] Para pagamento em 2x no cartão (Preço normal)
+[ 4 ] Para pagamentos em 3x ou mais no cartão (20% de juros)
+Tecle o número conforme a forma de pagamento: '''))
+if pagamento == 1:
+    desconto = valor * 0.90
+    print('Sua compra no valor de R$ {:.2f}, fica R$ {:.2f} com o desconto de 10%.'.format(valor, desconto))
+elif pagamento == 2:
+    desconto = valor * 0.95
+    print('Sua compra no valor de R$ {:.2f}, fica R$ {:.2f} com o desconto de 5%.'.format(valor, desconto))
+elif pagamento == 3:
+    parcelas = valor / 2
+    print('Sua compra fica no valor integral e pode ser parcelada - SEM JUROS - em até 2x de {:.2f}'.format(parcelas))
+elif pagamento == 4:
+    parcela = int(input('Quantas parcelas: '))
+    juros = valor * 1.20
+    parcelado = juros / parcela
+    print('''Sua compra de {:.2f}, ficará {:.2f} com 20% de juros
+E terá um valor por mês de {:.2f} em {} meses!'''.format(valor, juros, parcelado, parcela))
+else:
+    print('Opção inválida!')
