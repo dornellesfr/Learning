@@ -1,0 +1,8 @@
+print('=' * 40)
+print('{:^40}'.format('10 TERMOS DA PA'))
+print('=' * 40)
+num = int(input('Digite o primeiro termo: '))
+razao = int(input('Digite a razão da PA: '))
+decimo = num + (10 - 1) * razao
+for c in range(num, decimo + razao, razao):
+    print('{}'.format(c), end=' → ')
