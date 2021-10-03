@@ -1,0 +1,22 @@
+from random import randint
+computer = randint(0, 10)
+print('\033[36m-=-\033[m' * 6)
+print('\033[36mGUESSING GAMESHOW')
+print('\033[36m-=-\033[m' * 6)
+print('''I'm your computer
+So, I wanna see if you can choose the same number that I
+Remember... I just choose numbers 0 until 10''')
+got = False
+guesses = 0
+while not got:
+    player = int(input('Whats your guess? '))
+    guesses += 1
+    if player == computer:
+        got = True
+    else:
+        if player > computer:
+            print('Its so high that you cant see. Its less')
+        elif player < computer:
+            print('Holly! its less, you can shot bigger in next time.')
+print('\033[33mYeah, it is {}\033[m'.format(player))
+print('\033[32mDamn! you got it in {} guess(es). Congrats\033[m'.format(guesses))
