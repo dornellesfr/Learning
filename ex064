@@ -1,0 +1,8 @@
+num = add = count = 0
+num = int(input('Type a number [999 to stop]: '))
+while num != 999:
+    # you can use [num = int(input('Type a number [999 to stop]: '))] here, but need to subtract 999 of add and 1 count
+    add += num
+    count += 1
+    num = int(input('Type a number [999 to stop]: '))
+print('The plus of numbers you typed is {}, and the total numbers typed are {}.'.format(add, count))
