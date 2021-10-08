@@ -1,0 +1,16 @@
+st = int(input('Type a numb: '))
+r = int(input('Type the reason: '))
+num = st
+cont = 1
+plus = 10
+all = 0
+while plus != 0:
+    all += plus
+    while cont <= all:
+        print('{} -> '.format(num), end='')
+        num += r
+        cont += 1
+    print('STOP')
+    plus = int(input('\nHow many more numbers do you want? [PRESS 0 TO QUIT] \n'))
+print('The total of number is {}.'.format(all))
+print('THE END')
