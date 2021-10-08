@@ -1,0 +1,33 @@
+from time import sleep
+n1 = int(input('Type your number: '))
+n2 = int(input('Typer another number: '))
+option = 0
+while option != 5:
+    print('''\033[32mYou desire to
+[ 1 ] ADDITION
+[ 2 ] MULTIPLY
+[ 3 ] WICH IS BIGGEST
+[ 4 ] NEW NUMBERS
+[ 5 ] EXIT\033[m''')
+    option = int(input('>>>> Wich is your option? '))
+    if option == 1:
+        n = n1 + n2
+        print('\033[35mThe value of {} + {} = {}.\033[m'.format(n1, n2, n))
+    elif option == 2:
+        n = n1 * n2
+        print('\033[35mThe value of {} x {} = {}.\033[m'.format(n1, n2, n))
+    elif option == 3:
+        if n1 > n2:
+            print('\033[35mBetween {} and {} the biggest one is {}.\033[m'.format(n1, n2, n1))
+        elif n2 > n1:
+            print('\033[35mBetween {} and {} the biggest one is {}.\033[m'.format(n1, n2, n2))
+        else:
+            print('\033[35mTheyre the same numbers.\033[35m')
+    elif option == 4:
+        n1 = int(input('Type a number: '))
+        n2 = int(input('Type another number: '))
+    elif option > 5:
+        print('\033[35mError, option is not valid. Try again.\033[m')
+    print('-=-' * 8)
+    sleep(2)
+print('Ending... Thanks to use this program!')
