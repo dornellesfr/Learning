@@ -1,0 +1,12 @@
+amount = int(input('How many numbers do you want to the finobaccis sequence? '))
+x = 0
+y = 1
+cont = 3
+print('{} -> {}'.format(x, y), end=' -> ')
+while cont <= amount:
+    z = x + y
+    print('{}'.format(z), end=' -> ')
+    x = y
+    y = z
+    cont += 1
+print('THE END')
