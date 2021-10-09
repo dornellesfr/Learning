@@ -1,0 +1,18 @@
+number = int(input('Type a number: '))
+count = 1
+add = biggest = lesser = number
+contin = str(input('Do you want continue [Y/N]: ')).strip().upper()
+while contin == 'Y':
+    number = int(input('Type a number: '))
+    count += 1
+    add += number
+    contin = str(input('Do you want continue [Y/N]: ')).strip().upper()
+    if number > biggest:
+        biggest = number
+    elif number < lesser:
+        lesser = number
+average = add / count
+print('''You typed {} numbers
+Biggest number is {} and the lesser is {}
+the average number's typed is {}
+And the plus of them is {}'''.format(count, biggest, lesser, average, add))
