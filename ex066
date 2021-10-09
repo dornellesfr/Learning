@@ -1,0 +1,8 @@
+n = count = add = 0
+while True:
+    n = int(input('Type a number [TYPE 999 TO STOP] '))
+    if n == 999:
+        break
+    count += 1
+    add += n
+print(f'You typed {count} numbers and the plus of them is {add}')
