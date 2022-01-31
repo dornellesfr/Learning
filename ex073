@@ -1,0 +1,49 @@
+ligue = ('Atlético MG', 'Flamengo', 'Palmeiras', 'Fortaleza', 'Corinthians', 'Bragantino', 'Fluminense', 'América MG',
+        'Atlético GO', 'Santos', 'Ceará', 'Internacional', 'São Paulo', 'Athlético PR', 'Cuiabá', 'Juventude', 'Grémio',
+        'Bahia', 'Sport', 'Chapecoense')
+
+
+def line():
+    print('=-' * 10)
+
+
+def pos(count):
+    if count < 25 and count > 0:
+        for pos, c in enumerate(ligue):
+            print(f'{pos + 1:2}', end='° ')
+            print(c)
+            if pos == count:
+                break
+    elif count == 30:
+        for pos, c in enumerate(sorted(ligue)):
+            print(f'{pos + 1:2}', end='° ')
+            print(c)
+    else:
+        # I used this and this is functional, but I didn't do the positions(like enumerate).
+        # while True:
+        #     print(ligue[count:])
+        #     break
+        for pos, c in enumerate(ligue[-4:20]):
+            print(f'{pos + 17:2}', end='° ')
+            print(c)
+
+
+def whereischape():
+        index = ligue.index('Chapecoense')
+        return print(f'The Chapecoense is at {index + 1}°')
+
+
+line()
+pos(20)
+line()
+print('The top five positions are: ')
+pos(4)
+line()
+print('The last four teams are: ')
+pos(-4)
+line()
+print('Alphabetical order: ')
+pos(30)
+line()
+whereischape()
+line()
