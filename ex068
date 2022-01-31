@@ -1,0 +1,36 @@
+from random import randint
+from time import sleep
+print('=' * 24)
+print('Lets play ODDS OR EVENS ')
+print('=' * 24)
+count = 0
+# even pc % 2 == 0
+# else: odds
+while True:
+    pc = randint(0, 10)
+    choose = ' '
+    while choose not in 'EeOo':
+        choose = str(input('Select [O/E]: ')).strip().upper()
+    player = int(input('Type a number to play: '))
+    evens = (pc + player) % 2
+    print('LOADING...')
+    sleep(2)
+    if choose == 'E':
+        if evens == 0:
+            print(f'''I played {pc} and you {player} so the plus is {pc + player} (evens)...
+Oww, you winned this time, lets play again!''')
+            count += 1
+            sleep(1)
+        else:
+            print(f"It's a game over, I played {pc} and you {player} and it is {pc + player} (odds). You winned {count} time(s)")
+            break
+    elif choose == 'O':
+        if evens != 0:
+            print(f'I played {pc} and you played {player}... the plus of them is {pc + player} (odds). You win.')
+            count += 1
+            sleep(1)
+        else:
+            print(f'Its a game over, I played {pc} and you {player} and it is {pc + player} (evens). You winned {count} time(s)')
+            break
+    if choose not in 'EOeo':
+        print('That answer is not available, try again.')
