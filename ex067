@@ -1,0 +1,12 @@
+from time import sleep
+while True:
+    mult = int(input('\033[31m>>>>>>\033[m Do you wanna see what numbers table multiplication? '))
+    if mult < 0:
+        break
+    print('-' * 13)
+    for c in range(0, 11):
+        answer = c * mult
+        print(f'\033[33m{c}\033[m x \033[35m{mult}\033[m = \033[36m{answer}\033[m')
+    print('-' * 13)
+    sleep(1)
+print('The program is end. Thanks to see and use that.')
