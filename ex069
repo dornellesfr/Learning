@@ -1,0 +1,23 @@
+people = men = women = 0
+print('-=' * 9)
+print('REGISTER PEOPLE')
+print('-=' * 9)
+while True:
+    old = int(input('How old: '))
+    sex = ' '
+    while sex not in 'WwMm':
+        sex = str(input('sex [M/W] ')).strip().upper()
+    if old > 18:
+        people += 1
+    if sex in 'Mm':
+        men += 1
+    if sex in 'Ww':
+        if old < 20:
+            women += 1
+    ans = str(input('Do you wanna continue? [Y/N] ')).strip().upper()
+    print('-' * 18)
+    if ans in 'Nn':
+        break
+print(f"""In your register were {people} peoples with nineteen years or plus
+{men} men registered
+and {women} women with nineteen years or less.""")
