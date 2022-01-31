@@ -1,0 +1,30 @@
+print('=' * 20)
+print(f"{'NUBANK':^20}")
+print('=' * 20)
+valor = int(input('Type a value you need to get: R$ '))
+total = valor
+cedula = 200
+totced = 0
+while True:
+    if total >= cedula:
+        total -= cedula
+        totced += 1
+    else:
+        if totced > 0:
+            print(f'O total é de {totced} cédula(s) de R$ {cedula:.2f}')
+        if cedula == 200:
+            cedula = 100
+        elif cedula == 100:
+            cedula = 50
+        elif cedula == 50:
+            cedula = 20
+        elif cedula == 20:
+            cedula = 10
+        elif cedula == 10:
+            cedula = 5
+        elif cedula == 5:
+            cedula = 1
+        totced = 0
+        if total == 0:
+            break
+print('É um prazer poder ter você no nosso banco, aguardamos seu retorno.')
