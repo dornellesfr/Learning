@@ -1,0 +1,9 @@
+count = ('Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen',
+'Fourteen', 'Fiveteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty')
+while True:
+    n = int(input('Put a number between 0 and 20: '))
+    if 0 <= n <= 20:
+        break
+    else:
+        n = int(input('Try AGAIN. Put a number between 0 and 20: '))
+print(f'You selected the number {count[n]}')
