@@ -1,0 +1,28 @@
+print('-' * 31)
+print(f"{'BIG SALE STORE':^31}")
+print('-' * 31)
+allprice = count = price = comparation = count2 = less = 0
+name = ''
+while True:
+    product = str(input('Whats name product? '))
+    price = float(input('PRICE: R$ '))
+    comparation = price
+    allprice += price
+    count2 += 1
+    if comparation > 1000:
+        count += 1
+    if count2 == 1:
+        less = price
+        name = product
+    else:
+        if price < less:
+            less = price
+            name = product
+    contin = ' '
+    while contin not in 'YyNn':
+        contin = str(input('Do you want continue? [Y/N] '))
+    if contin in 'Nn':
+        break
+print(f'''The total spend value is R$ {allprice:.2f}.
+There are {count} products over R$ 1000,00.
+And smaller product is {name.title()} and his price is R$ {less:.2f}.''')
