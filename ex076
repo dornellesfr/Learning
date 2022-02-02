@@ -1,0 +1,18 @@
+def line():
+    print('_' * 38)
+
+
+line()
+print(f'{"PRICES LIST":^38}')
+line()
+n = 0
+v = 1
+items = ('Pencil', 0.50, 'Eraser', 1.32, 'Notebook', 5.54, 'Pencil Case', 9.12, 'Protactor', 1.00, 'Compass', 1.50,
+'Backpack', 85.76, 'Pens', 20.34, 'Book', 50.00)
+counter = 0
+while counter < 17:
+    print(f'{items[n]:.<30}U$ {items[v]:>5.2f}')
+    n += 2
+    v += 2
+    counter += 2
+line()
