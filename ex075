@@ -1,0 +1,23 @@
+countnine = counteven = 0
+
+l = []
+for c in range(0,4):
+    c = int(input('Type a number: '))
+    l.append(c)
+l = tuple(l)
+
+print(f'You typed the values {l}')
+
+for c in l:
+    if c == 9:
+        countnine += 1
+    if c % 2 == 0:
+        counteven += 1
+
+if 3 in l:
+    print(f'The value 3 is in the position {l.index(3) + 1}')
+else:
+    print(f'The value 3 it doesnt finded')
+
+print(f'Are/is a {countnine} nine in this values')
+print(f'The even\'s values are/is: {counteven}')
