@@ -1,0 +1,9 @@
+words = ('Learn', 'Program', 'Language', 'Phyton', 'Course', 'Free', 'Study',
+         'Practice', 'Work', 'Market', 'Programmer', 'Future')
+
+for word in words:
+    print(f'\nIn the word {word.upper()} are/is:', end=' ')
+    word = word.lower()
+    for letter in word:
+        if letter in 'aeiou':
+            print((letter), end=' ')
