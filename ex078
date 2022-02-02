@@ -1,0 +1,15 @@
+list = []
+greatest = smallest = 0
+for c in range(0, 5):
+    list.append(int(input(f'Input a number to position {c}: ')))
+print(list)
+max = max(list)
+smallest = min(list)
+print(f'The greatest number is {max} and his position is :', end=' ')
+for i, v in enumerate(list):
+    if v == max:
+        print(i, end=' ')
+print(f'\nThe smallest number is {smallest} and his position is :', end=' ')
+for i, v in enumerate(list):
+    if v == smallest:
+        print(i, end=' ')
