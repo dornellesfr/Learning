@@ -1,0 +1,20 @@
+# exp = input('Type a numerical expression: ')
+# if exp.count('(') == exp.count(')'):
+#     print('Your expression is correctly')
+# else:
+#     print('Your expression is wrong!')
+exp = input('Type a numerical expression: ')
+all = []
+for c in exp:
+    if c == '(':
+        all.append('(')
+    elif c == ')':
+        if len(all) > 0:
+            all.pop()
+        else:
+            all.append(')')
+            break
+if len(all) == 0:
+    print('Your expression is correctly')
+else:
+    print('Your expression is wrong!')
