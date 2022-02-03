@@ -1,0 +1,15 @@
+list = []
+while True:
+    n = int(input('Type a number: '))
+    if n not in list:
+        list.append(n)
+        print('The value was added!')
+    else:
+        print('This value is already in list!! Try again!')
+    a = input('Do you wanna continue putting numbers? [y/n] ')
+    if a in 'Nn':
+        break
+list.sort()
+print('You choose the numbers: ', end='')
+for c in list:
+    print(c, end=' ')
