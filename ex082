@@ -1,0 +1,17 @@
+list = []
+listeven = []
+listodd = []
+while True:
+    n = int(input('Type a number: '))
+    list.append(n)
+    if n % 2 == 0:
+        listeven.append(n)
+    else:
+        listodd.append(n)
+    a = input('Do you wanna continue putting numbers? [Y/N] ')
+    if a in 'Nn':
+        break
+print('-=' * 20)
+print(f'The complet list is {list}\n'
+      f'The list with even numbers is {listeven}\n'
+      f'The list with odd numbers is {listodd}')
