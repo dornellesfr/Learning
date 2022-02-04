@@ -1,0 +1,29 @@
+date = []
+unity = []
+all = 0
+while True:
+    unity.append(str(input('Name: ')))
+    unity.append(float(input('Weight: ')))
+    date.append(unity.copy())
+    unity.clear()
+    a = str(input('Do you want continue? [Y/N] '))
+    all += 1
+    if a in 'Nn':
+        break
+date.sort(key=lambda date : date[1])
+pos = 0
+min = []
+while pos < len(date):
+    if date[pos][1] == date[0][1]:
+        min.append(date[pos][0])
+    pos += 1
+date.sort(key=lambda date : date[1], reverse=True)
+pos = 0
+maxi = []
+while pos < len(date):
+    if date[pos][1] == date[0][1]:
+        maxi.append(date[pos][0])
+    pos += 1
+print(f'There are {all} people registered') #You can use len(date) to see all of users
+print(f'The biggest Weight was {date[0][1]}Kg. This weight is {maxi}\n'
+      f'The lowest weight was {date[-1][1]}Kg. This weight is {min}')
