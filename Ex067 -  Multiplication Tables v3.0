@@ -1,6 +1,6 @@
 from time import sleep
 while True:
-    mult = int(input('\033[31m>>>>>>\033[m Do you wanna see what numbers table multiplication? '))
+    mult = int(input('\033[31m>>>>>>\033[m Do you wanna see what numbers multiplication tables? '))
     if mult < 0:
         break
     print('-' * 13)
