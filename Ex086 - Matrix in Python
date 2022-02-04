@@ -1,0 +1,33 @@
+# matriz = []
+# l1 = []
+# l2 = []
+# l3 = []
+# # in this method i cant use the scale [0, 1], [0, 2] to define the position.
+# for c in range(0, 9):
+#     n = int(input(f'Type a number : '))
+#     if 0 <= c <= 2:
+#         l1.append(n)
+#     elif 3 <= c <= 5:
+#         l2.append(n)
+#     else:
+#         l3.append(n)
+# matriz.append(l1)
+# matriz.append(l2)
+# matriz.append(l3)
+# for m in matriz:
+#     for v, l in enumerate(m):
+#         print(f'[{l:^3}]', end=' ')
+#         if v == 2:
+#             print()
+#
+
+# This is simplified to do! :)
+
+matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+for l in range(0, 3):
+    for c in range(0, 3):
+        matriz[l][c] = int(input(f'Type a number to position [{l}, {c}]: '))
+for l in range(0, 3):
+    for c in range(0, 3):
+        print(f'[{matriz[l][c]:^5}]', end=' ')
+    print()
