@@ -1,0 +1,24 @@
+from random import randint as r
+from time import sleep as s
+list = []
+data = []
+print('_' * 40)
+print(f'{"PowerBall Bet":^40}')
+print('_' * 40)
+n = int(input(f'{"How many bets do you want?":^40}\n'))
+print('_' * 40)
+print('-=' * 5 + f'  Sorting {n} games  ' + '-=' * 5)
+print('_' * 40)
+for c in range(0, n):
+    bet = 0
+    while bet != 6:
+        a = r(1, 60)
+        if a not in data:
+            data.append(a)
+            bet += 1
+    list.append(data.copy())
+    data.clear()
+for i, c in enumerate(list):
+    print(f'Your {i + 1}° bet is: {sorted(c)}')
+    s(0.5)
+print('-=' * 5 + f'  GOOD LUCK  ' + '-=' * 5)
