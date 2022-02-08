@@ -1,1 +1,31 @@
-
+list = []
+data = []
+while True:
+    name = input('Type student\'s name: ')
+    data.append(name)
+    for i in range(0, 2):
+        note = float(input(f'Type {i + 1}° note: '))
+        data.append(note)
+    list.append(data.copy())
+    data.clear()
+    a = input('Do you want continue? [Y/N] ')
+    if a in 'Nn':
+        break
+print('-=' * 30)
+print(f'{"N°":<2} {"Name":<11}{"Media":>}')
+print('_' * 20)
+for p, l in enumerate(list):
+    media = (list[p][1] + list[p][2]) / 2
+    print(f'{p:<2} {list[p][0]:.<12}{media:>}')
+print('_' * 20)
+while True:
+    n = int(input('Do you want to see what student\'s note?(type number of it) [999 to stop]: '))
+    if n == 999:
+        break
+    else:
+        student = list[n][0]
+        notes = []
+        notes.append(list[n][1])
+        notes.append(list[n][2])
+        print(f'The student {n} is {student}.\n'
+              f'the notes of it is: {notes}')
