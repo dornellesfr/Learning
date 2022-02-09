@@ -1,0 +1,19 @@
+from time import sleep as s
+from random import randint as r
+from operator import itemgetter
+game = {
+    'PLAYER1': r(1, 6),
+    'PLAYER2': r(1, 6),
+    'PLAYER3': r(1, 6),
+    'PLAYER4': r(1, 6)
+}
+ranking = {}
+print('Sorted values: ')
+for k, v in game.items():
+    print(f'The {k} has played {v}')
+    s(0.5)
+print('-=' * 20)
+ranking = sorted(game.items(), key=itemgetter(1), reverse=True)
+for i, c in enumerate(ranking):
+    print(f'{i+1}° is {c[0]} with {c[1]} points')
+    s(0.5)
