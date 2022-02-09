@@ -1,0 +1,15 @@
+from datetime import datetime
+person = {}
+person['name'] = str(input('Name: '))
+person['born'] = int(input('Born: '))
+person['clt'] = int(input('CLT number [0 no have]: '))
+person['age'] = datetime.now().year - person['born']
+if person['clt'] != 0:
+    person["contrat's year"] = int(input('Start of contratation: '))
+    person["salary"] = float(input('Salary: R$ '))
+    retire = (person["contrat's year"] - person["born"]) + 35
+    person["retire"] = retire
+print('-=' * 20)
+for k, v in person.items():
+    print(f'   - The {k} is {v}')
+    
