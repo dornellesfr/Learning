@@ -1,0 +1,15 @@
+name = str(input('Name: '))
+media = float(input(f'{name}\'s media is:  '))
+student = {
+    'Name': name,
+    'Media': media,
+}
+if media >= 7:
+    student['Status'] = 'Approved'
+elif media < 5:
+    student['Status'] = 'reproved'
+else:
+    student['Status'] = 'retaked'
+print('-=' * 20)
+for k, v in student.items():
+    print(f'   - His/her {k} is: {v}')
