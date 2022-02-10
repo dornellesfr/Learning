@@ -1,0 +1,25 @@
+def line():
+    return print('-=' * 25)
+
+
+player = {}
+goals = []
+total = 0
+player['name'] = str(input('Player name: '))
+matches = int(input('How many games he/she played? '))
+for c in range(0, matches):
+    g = int(input(f'How many goals he/she do in {c + 1}° match? '))
+    total += g
+    goals.append(g)
+player['goals'] = goals.copy()
+player['total'] = total
+line()
+print(player)
+line()
+for k, v in player.items():
+    print(f'His/her {k} is {v}')
+line()
+print(f'The player {player["name"]} played {matches} matches.')
+for i, c in enumerate(player["goals"]):
+    print(f'   => On {i + 1} match he/she do {c} goals')
+print(f'It was a total of {player["total"]} goals.')
