@@ -1,0 +1,49 @@
+people = []
+person = {}
+all_ages = 0
+list_woman = []
+woman = {}
+while True:
+    person['name'] = str(input('Name: '))
+    while True:
+        person['sex'] = str(input('Sex [M/F]: '))
+        if person['sex'] in 'MmFf':
+            break
+        else:
+            person['sex'] = str(input('ERROR: Please, type just M or F: '))
+            if person['sex'] in 'MmFf':
+                break
+    if person['sex'] in 'Ff':
+        woman["name"] = person.copy()['name']
+        list_woman.append(woman.copy())
+    person['age'] = int(input('Age: '))
+    dict_copy = person.copy()
+    people.append(dict_copy)
+    all_ages += person['age']
+    while True:
+        a = str(input('Do you want continue? [Y/N]: '))
+        if a in 'YyNn':
+            break
+        else:
+            a = str(input('ERROR: Try again putting just Y or N: '))
+            if a in 'YyNn':
+                break
+    if a in 'Nn':
+        break
+media = all_ages / len(people)
+old_mans = []
+for i in people:
+    if i['age'] > media:
+        old_mans.append(i.copy())
+print(old_mans)
+print('-=' * 25)
+print(f'A) There are {len(people)} peoples registered.')
+print(f'B) Age\'s media are {media:.2f} years old.')
+print(f'C) The woman registered are: ', end='')
+for c in list_woman:
+    print(c['name'], end=' ')
+print()
+print('D) List of people who are more than media age: ', end=' \n')
+for v in old_mans:
+    print(f'   => Name = {v["name"]}; Sex = {v["sex"]}; Age = {v["age"]};')
+print('<<<FINISHED>>>')
