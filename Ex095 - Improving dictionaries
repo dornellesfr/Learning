@@ -1,0 +1,44 @@
+def line():
+    return print('-=' * 25)
+
+
+team = []
+while True:
+    player = {}
+    goals = []
+    total = 0
+    player['name'] = str(input('Player name: '))
+    matches = int(input('How many games he/she played? '))
+    for c in range(0, matches):
+        g = int(input(f'How many goals he/she do in {c + 1}° match? '))
+        total += g
+        goals.append(g)
+    player['goals'] = goals.copy()
+    player['total'] = total
+    team.append(player.copy())
+    while True:
+        a = str(input('Do you wanna continue? [Y/N]: '))
+        if a in 'YyNn':
+            break
+    if a in 'Nn':
+        break
+line()
+print(f'{"N°":<3}{"Name":<15}{"goals":<15}{"total":<15}')
+print('_' * 50)
+for pos, play in enumerate(team):
+    print(f'{pos:<3}', end='')
+    for d in play.values():
+        print(f'{str(d):<15}', end='')
+    print()
+line()
+while True:
+    n = int(input('Type a number to know the score of player: [999 to stop] '))
+    if n == 999:
+        break
+    elif n < len(team):
+        print('_' * 50)
+        print(f'  __ About player {team[n]["name"]}')
+        for i, c in enumerate(team[n]["goals"]):
+            print(f'   On {i + 1} match he/she do {c} goals')
+        print(f'It was a total of {team[n]["total"]} goals.')
+        print('_' * 50)
