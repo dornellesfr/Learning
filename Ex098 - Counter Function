@@ -1,0 +1,32 @@
+from time import sleep
+
+
+def counter(a, b, c):
+    if c < 0:
+        c *= (-1)
+    if c == 0:
+        c = 1
+    print('-=' * 20)
+    print(f'Counting to {a} until {b} to {c} by {c}')
+    if a > b:
+        while a >= b:
+            print(a, end=' ')
+            a -= c
+            sleep(0.3)
+        print('THE END')
+    else:
+        while a <= b:
+            print(a, end=' ')
+            a += c
+            sleep(0.3)
+        print('THE END')
+    print('-=' * 20)
+
+
+# counter(1, 10, 1)
+# counter(10, 0, 2)
+print('It\'s your turn to do the counter! ')
+s = int(input('Start: '))
+e = int(input('End: '))
+p = int(input('Pass: '))
+counter(s, e, p)
