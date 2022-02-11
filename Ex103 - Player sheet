@@ -1,0 +1,16 @@
+def player(name='<unrecognised>', goals=0):
+    return f'The player {name} did {goals} goals'
+
+
+n = str(input("Player name: "))
+g = str(input("Goals: "))
+if g.isnumeric():
+    g = int(g)
+else:
+    g = 0
+if n.strip() == '':
+    player(goals=g)
+else:
+    player(n, g)
+print(player(n, g))
+# I can't do this incrible LIFEHACK(GAMBIARRA)
