@@ -1,0 +1,30 @@
+from time import sleep
+
+
+def bigger(* args):
+    if args == None:
+        print(f'It has been informed None values.')
+    g = count = 0
+    while count < len(args):
+        if count == 0:
+            g = args[count]
+        else:
+            if args[count] > g:
+                g = args[count]
+        count += 1
+    print('_' * 30)
+    print('Analysing the values...')
+    sleep(0.3)
+    print(f'It has been informed {len(args)} values.')
+    for c in args:
+        print(c, end=' ')
+        sleep(0.5)
+    print(f'The greatest value is: {g}')
+    print('_' * 30)
+
+
+bigger(2, 9, 4, 5, 7, 1)
+bigger(4, 7, 0)
+bigger(1, 2)
+bigger(6)
+bigger()
