@@ -1,0 +1,19 @@
+def sort(args):
+   from random import randint as r
+   for c in range(0, 5):
+      args.append(r(0, 10))
+   print(f'Sorting a list value: {args}')
+   return args
+
+
+def plus(arg):
+   sort(arg)
+   even = 0
+   for c in arg:
+      if c % 2 == 0:
+         even += c
+   print(f'The sum even\'s values of {arg} is: {even}')
+
+
+lst = []
+plus(lst)
