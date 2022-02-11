@@ -1,0 +1,10 @@
+def land(a, b):
+    area = a * b
+    print(f'The land {a:.2f}m x{b:.2f}m has a area {area:.2f}m²')
+
+
+print(f'{"Land control":^30}')
+print(f'-' * 30)
+large = float(input('Type the land\'s large (m): '))
+length = float(input('Type the land\'s length (m): '))
+land(large, length)
