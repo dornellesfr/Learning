@@ -1,0 +1,26 @@
+def notes(* note, sit=False):
+    """
+    Function to anlysis notes and show situations of students
+    :param note: student's notes
+    :param sit: optional value, if it will be True indicate the situation about the student
+    :return: the dict about notes max, min, media and situation if it in sit=True
+    """
+    print('_' * 30)
+    dic = {}
+    dic['total'] = len(note)
+    dic['biggest'] = max(note)
+    dic['lowest'] = min(note)
+    dic['media'] = sum(note) / len(note)
+    if sit:
+        if dic['media'] <= 5:
+            dic['situation'] = 'awefull'
+        elif dic['media'] >= 7:
+            dic['situation'] = 'awesome'
+        else:
+            dic['situation'] = 'moderate'
+    return dic
+
+
+# principal program
+ans = notes(9, 10, 5.5, sit=True)
+print(ans)
