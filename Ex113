@@ -1,0 +1,30 @@
+def readInt(msg):
+    while True:
+        try:
+            n = int(input('Type a int number: '))
+        except (ValueError, TypeError):
+            print('ERROR: Type a int number valid, please.')
+            continue
+        except KeyboardInterrupt:
+            print('Data not informed by user')
+            return 0
+        else:
+            return n
+
+
+def readFloat(msg):
+    while True:
+        try:
+            n = float(input('Type a real number: '))
+        except (ValueError, TypeError):
+            print('ERROR: Type a int number valid, please.')
+        except KeyboardInterrupt:
+            print('Data not informed by user')
+            return 0
+        else:
+            return n
+
+
+n = readInt('')
+h = readFloat('')
+print(f'You typed the number int {n} and the number float {h}')
