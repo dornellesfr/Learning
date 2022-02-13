@@ -1,0 +1,24 @@
+def title(msg, color):
+    p = f'  Acessing the {msg}  '
+    print(f'{color}~' * (len(p) + 4))
+    print(p)
+    print('~' * (len(p) + 4)), print('\033[m')
+
+
+def helping(a):
+    from time import sleep
+    title(f'comand {a}', '\033[1;44m')
+    sleep(0.7)
+    print('\033[1;107m')
+    print(help(a))
+    print('\033[1;107m')
+    return a
+
+
+while True:
+    title('interactive helping system', '\033[1;42m')
+    comand = str(input('Library or fuction > '))
+    if comand == 'END' or comand == 'end':
+        title('to the program end\'s, goodbye', '\033[1;41m')
+        break
+    helping(comand)
