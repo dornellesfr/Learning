@@ -1,0 +1,17 @@
+def readInt(a):
+    h = input(a)
+    if h.isnumeric():
+        h = int(h)
+    else:
+        while h != int:
+            print('Error: input a int number!')
+            h = input('Type a number: ')
+            if h.isnumeric():
+                h = int(h)
+                break
+    return h
+
+
+#Principal program
+n = readInt('Type a number: ')
+print(f'You typed the number {n}')
